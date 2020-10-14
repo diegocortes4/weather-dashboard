@@ -3,7 +3,7 @@ let city = $("#searchTerm").val();
 
 
 
-const apiKey = "";
+const apiKey = "b69a5615437d3de0211a03a0a532c603";
 
 
 let date = new Date();
@@ -25,4 +25,17 @@ $("#searchBtn").on("click", function() {
 
 
   city = $("#searchTerm").val();
-]
+})
+
+function weatherApi(city){
+   var url ="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apiKey 
+   $.ajax({
+    url: url,
+    type: "GET",
+  
+  }) .then(function(response){
+      console.log(response)
+  }) 
+}
+
+weatherApi("miami")
