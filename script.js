@@ -35,7 +35,14 @@ function weatherApi(city){
   
   }) .then(function(response){
       console.log(response)
-  }) 
+
+      }
+    }
+  });
+
 }
+  
 
 weatherApi("miami")
+
+
